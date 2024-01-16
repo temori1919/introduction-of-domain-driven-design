@@ -64,7 +64,7 @@ class CircleApplicationService
                 throw new Exception('サークルなし');
             }
 
-            if ($this->circleService->isOverThirty()) {
+            if ($this->circleService->isOverThirty($circle)) {
                 throw new Exception('30名以上います');
             }
 

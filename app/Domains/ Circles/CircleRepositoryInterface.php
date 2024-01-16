@@ -11,5 +11,5 @@ interface CircleRepositoryInterface
     public function save(Circle $circle): void;
     public function findId(CircleId $circleId): Circle;
     public function findName(CircleName $circleName): Circle;
-    public function count(): int;
+    public function count(CircleId $circleId): int;
 }

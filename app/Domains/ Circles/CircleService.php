@@ -19,9 +19,9 @@ class CircleService
         return  $duplicated !== null;
     }
 
-    public function isOverThirty(): bool
+    public function isOverThirty(Circle $circle): bool
     {
-        $count = $this->circleRepository->count();
+        $count = $this->circleRepository->count($circle->circleId);
         return $count >= 30;
     }
 }
